@@ -23,8 +23,9 @@ def get_device_id():
 
 radio.on()
 
+name, topics = people[get_device_id()]
+
 while True:
-    name, topics = people[get_device_id()]
     mb.display.scroll(name.upper() + '  ', delay=120)
 
     if mb.button_a.was_pressed():
